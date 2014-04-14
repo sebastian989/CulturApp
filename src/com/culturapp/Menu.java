@@ -22,4 +22,9 @@ public class Menu extends Activity {
 		Intent intent = new Intent(this, Noticias.class);
 		startActivity(intent);
 	}
+	
+	public void social(View v){
+		Intent intent = new Intent(this, Social.class);
+		startActivity(intent);
+	}
 }
