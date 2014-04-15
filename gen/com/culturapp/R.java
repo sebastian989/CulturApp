@@ -14,6 +14,18 @@ public final class R {
     }
     public static final class attr {
     }
+    public static final class color {
+        public static final int blue=0x7f050004;
+        public static final int cyan=0x7f050009;
+        public static final int fondBlue=0x7f050008;
+        public static final int green1=0x7f050000;
+        public static final int green2=0x7f050001;
+        public static final int green3=0x7f050002;
+        public static final int orange=0x7f050007;
+        public static final int red=0x7f050006;
+        public static final int teal=0x7f050003;
+        public static final int violet=0x7f050005;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -21,53 +33,93 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
-        public static final int barra_superior=0x7f020000;
-        public static final int boton_atras=0x7f020001;
-        public static final int boton_invitados=0x7f020002;
-        public static final int boton_noticia=0x7f020003;
-        public static final int boton_programacion=0x7f020004;
-        public static final int boton_redessociales=0x7f020005;
-        public static final int boton_ubicacion=0x7f020006;
-        public static final int fondo_invitados=0x7f020007;
-        public static final int fondo_menu=0x7f020008;
-        public static final int fondo_noticias=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
-        public static final int linea=0x7f02000b;
-        public static final int splash=0x7f02000c;
+        public static final int alejandro_piscitelli=0x7f020000;
+        public static final int barra_superior=0x7f020001;
+        public static final int boton_atras=0x7f020002;
+        public static final int boton_facebook=0x7f020003;
+        public static final int boton_instagram=0x7f020004;
+        public static final int boton_invitados=0x7f020005;
+        public static final int boton_noticia=0x7f020006;
+        public static final int boton_programacion=0x7f020007;
+        public static final int boton_redessociales=0x7f020008;
+        public static final int boton_twitter=0x7f020009;
+        public static final int boton_ubicacion=0x7f02000a;
+        public static final int der_alejandro_piscitelli=0x7f02000b;
+        public static final int der_alexandra_cardenas=0x7f02000c;
+        public static final int der_carlos_scolari=0x7f02000d;
+        public static final int der_cleomar_rocha=0x7f02000e;
+        public static final int der_cynthia_lawson_jaramillo=0x7f02000f;
+        public static final int der_gary_hill=0x7f020010;
+        public static final int der_heitor_alvelos=0x7f020011;
+        public static final int der_iliana_hernandez=0x7f020012;
+        public static final int der_jorge_barco=0x7f020013;
+        public static final int der_jorge_crowe=0x7f020014;
+        public static final int der_miguel_petchkovsky=0x7f020015;
+        public static final int der_neon_dos=0x7f020016;
+        public static final int der_neon_uno=0x7f020017;
+        public static final int der_pat_badani=0x7f020018;
+        public static final int der_raul_marroquin=0x7f020019;
+        public static final int der_ricardo_de_armas=0x7f02001a;
+        public static final int der_vaca_forero=0x7f02001b;
+        public static final int fondo_invitados=0x7f02001c;
+        public static final int fondo_menu=0x7f02001d;
+        public static final int fondo_noticias=0x7f02001e;
+        public static final int fondo_social=0x7f02001f;
+        public static final int ic_launcher=0x7f020020;
+        public static final int izq_colectivo_platohedro=0x7f020021;
+        public static final int izq_cristiano_rosa=0x7f020022;
+        public static final int izq_dagostino_headshot=0x7f020023;
+        public static final int izq_elena_corchero=0x7f020024;
+        public static final int izq_eva_zoellner=0x7f020025;
+        public static final int izq_hugo_pardo=0x7f020026;
+        public static final int izq_kim_grinfeder=0x7f020027;
+        public static final int izq_luminico=0x7f020028;
+        public static final int izq_martin_groisman=0x7f020029;
+        public static final int izq_max_schleser=0x7f02002a;
+        public static final int izq_neon=0x7f02002b;
+        public static final int izq_nonotak_studio=0x7f02002c;
+        public static final int izq_peter_pocs=0x7f02002d;
+        public static final int izq_ricardo_dal_farra=0x7f02002e;
+        public static final int izq_robert_cahen=0x7f02002f;
+        public static final int izq_rodrigo_de_la_calle=0x7f020030;
+        public static final int izq_vicente_guallard=0x7f020031;
+        public static final int linea=0x7f020032;
+        public static final int recuadro_inferior=0x7f020033;
+        public static final int splash=0x7f020034;
+        public static final int texto_siguenos=0x7f020035;
     }
     public static final class id {
-        public static final int action_settings=0x7f090007;
-        public static final int imageView1=0x7f090001;
-        public static final int imageView2=0x7f090003;
-        public static final int imageView3=0x7f090004;
-        public static final int imageView4=0x7f090005;
-        public static final int imageView5=0x7f090006;
-        public static final int listView1=0x7f090000;
-        public static final int textView1=0x7f090002;
+        public static final int imageView1=0x7f090005;
+        public static final int imageView2=0x7f090001;
+        public static final int imageView3=0x7f090007;
+        public static final int imageView4=0x7f090008;
+        public static final int imageView5=0x7f090009;
+        public static final int listView1=0x7f09000a;
+        public static final int scrollView1=0x7f090000;
+        public static final int textView1=0x7f090006;
+        public static final int textView2=0x7f090002;
+        public static final int textView3=0x7f090003;
+        public static final int textView4=0x7f090004;
     }
     public static final class layout {
         public static final int inicio=0x7f030000;
         public static final int invitados=0x7f030001;
         public static final int menu=0x7f030002;
         public static final int noticias=0x7f030003;
-    }
-    public static final class menu {
-        public static final int inicio=0x7f080000;
-        public static final int invitados=0x7f080001;
-        public static final int menu=0x7f080002;
-        public static final int noticias=0x7f080003;
+        public static final int social=0x7f030004;
     }
     public static final class string {
-        public static final int action_settings=0x7f060001;
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060002;
-        public static final int title_activity_invitados=0x7f060004;
-        public static final int title_activity_menu=0x7f060003;
-        public static final int title_activity_noticias=0x7f060005;
+        public static final int action_settings=0x7f070001;
+        public static final int app_name=0x7f070000;
+        public static final int hello_world=0x7f070002;
+        public static final int title_activity_invitados=0x7f070004;
+        public static final int title_activity_menu=0x7f070003;
+        public static final int title_activity_noticias=0x7f070005;
+        public static final int title_activity_social=0x7f070006;
     }
     public static final class style {
         /** 
@@ -79,22 +131,11 @@ public final class R {
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
     }
 }

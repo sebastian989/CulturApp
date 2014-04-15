@@ -12,11 +12,4 @@ public class Noticias extends Activity {
 		setContentView(R.layout.noticias);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.noticias, menu);
-		return true;
-	}
-
 }
