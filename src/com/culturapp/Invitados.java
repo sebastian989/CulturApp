@@ -17,4 +17,8 @@ public class Invitados extends Activity {
 		Intent intent = new Intent(this, Invitados.class);
 		startActivity(intent);
 	}
+	
+	public void atras(View v){
+		this.finish();
+	}
 }

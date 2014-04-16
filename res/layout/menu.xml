@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
                 android:onClick="invitados"
-                android:src="@drawable/boton_invitados" />
+                android:src="@drawable/boton_acercade" />
 
             <ImageView
                 android:id="@+id/imageView2"

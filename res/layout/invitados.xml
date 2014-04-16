@@ -15,11 +15,30 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
             
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="90dp"
+                android:text="@string/acerca_de"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/linea_acerca_de" />
+            
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="90dp" >
+                android:layout_marginTop="30dp" >
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -75,6 +94,7 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="right"
                         android:text="Gary Hill"
                         android:textColor="@color/red" />
 
@@ -82,6 +102,7 @@
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="right"
                         android:text="Estados Unidos"
                         android:textColor="@android:color/white" />
 
@@ -89,6 +110,7 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="right"
                         android:text="www.garyhill.com"
                         android:textColor="@android:color/white" />
 
@@ -162,7 +184,8 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Alejandro Piscitelli "
+                        android:text="Alejandro Piscitelli"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -170,13 +193,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Argentina"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="www.filosofitis.com.ar/about/"
+                        android:text="www.filosofitis.com.ar/\nabout/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -248,7 +273,8 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Carlos Scolari "
+                        android:text="Carlos Scolari"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -256,6 +282,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="España"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -263,6 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="www.hipermediaciones.com"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -310,7 +338,7 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="www.villamagna.es/dining-es.html"
+                        android:text="www.villamagna.es/\ndining-es.html"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -334,7 +362,8 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pat Badani "
+                        android:text="Pat Badani"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -342,6 +371,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Canadá"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -349,6 +379,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="www.patbadani.net/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -421,6 +452,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Dr. Heitor Alvelos"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -428,13 +460,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Portugal"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="www.heitoralvelos.wordpress.com/"
+                        android:text="www.heitoralvelos.\nwordpress.com/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -507,6 +541,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cynthia Lawson Jaramillo"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -514,6 +549,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="USA / Colombia"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -521,6 +557,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="www.cynthialawson.com/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -593,6 +630,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Raul Marroquín"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -600,13 +638,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Colombia / Paises Bajos"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="raulmarroquin.wordpress.com/"
+                        android:text="raulmarroquin.\nwordpress.com/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -628,7 +668,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/izq_robert_cahen" />
+                    android:src="@drawable/izq_dagostino_headshot" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -679,6 +719,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Iliana Hernandez García"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -686,6 +727,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Colombia"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -693,6 +735,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="goo.gl/H8KlLS"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -765,6 +808,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cleomar Rocha"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -772,6 +816,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Brasil"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -779,6 +824,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="medialab.ufg.br/site/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -851,6 +897,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jorge Crowe"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -858,6 +905,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Argentina"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -865,6 +913,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="laboratoriodejuguete.com/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -937,6 +986,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Miguel Petchkovsky"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -944,6 +994,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Angola / Países Bajos"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -951,6 +1002,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="www.nimk.nl/nl/time-frame"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1022,7 +1074,8 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yumi Murakami "
+                        android:text="Yumi Murakami"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1030,6 +1083,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Noruega / Japón"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -1037,6 +1091,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="yumimurakami.com/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1045,7 +1100,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/alejandro_piscitelli" />
+                    android:src="@drawable/der_neon_dos" />
 
             </LinearLayout>
             <LinearLayout
@@ -1058,7 +1113,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/izq_robert_cahen" />
+                    android:src="@drawable/izq_neon" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1070,7 +1125,7 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Heloisa Amaral "
+                        android:text="Heloisa Amaral"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1109,6 +1164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Karin Hellqvist"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1116,13 +1172,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Suecia"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="www.karinhellqvist.com/ "
+                        android:text="www.karinhellqvist.com/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1131,7 +1189,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/alejandro_piscitelli" />
+                    android:src="@drawable/der_neon_uno" />
 
             </LinearLayout>
             <LinearLayout
@@ -1194,7 +1252,8 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Alexandra Cárdenas "
+                        android:text="Alexandra Cárdenas"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1202,13 +1261,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Colombia / Alemania"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="cargocollective.com/tiemposdelruido"
+                        android:text="cargocollective.com\n/tiemposdelruido"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1281,6 +1342,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jorge Barco"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1288,6 +1350,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Colombia"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -1295,6 +1358,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="nuevonomada.flavors.me/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1366,7 +1430,8 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ricardo de Armas "
+                        android:text="Ricardo de Armas"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1374,13 +1439,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Argentina"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="www.ricardodearmas.mibvc.com.ar"
+                        android:text="www.ricardodearmas.\nmibvc.com.ar"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1453,6 +1520,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jorge Luis Vaca Forero"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1460,6 +1528,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Colombia"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -1467,6 +1536,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1539,6 +1609,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ingid Bachmann"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1546,6 +1617,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Canada"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -1553,6 +1625,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="www.ingridbachmann.com"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1625,6 +1698,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ceci Arango"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1632,6 +1706,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Colombia"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -1639,6 +1714,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="www.ceciarango.com/"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1711,6 +1787,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Eduardo Huerta"
+                        android:layout_gravity="right"
                         android:textColor="@color/red" />
 
                     <TextView
@@ -1718,6 +1795,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="España"
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                     <TextView
@@ -1725,6 +1803,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""
+                        android:layout_gravity="right"
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
@@ -1750,6 +1829,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="10"
+            android:onClick="atras"
             android:padding="10dp"
             android:src="@drawable/boton_atras" />
         
@@ -1760,7 +1840,8 @@
             android:layout_gravity="center"
             android:layout_weight="90"
             android:gravity="center_horizontal"
-            android:text="Invitados"
+            android:paddingRight="5dp"
+            android:text="Acerca de"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
         

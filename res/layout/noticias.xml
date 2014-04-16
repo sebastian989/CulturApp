@@ -9,13 +9,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/barra_superior" >
+        android:background="@drawable/barra_superior2" >
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="10"
+            android:onClick="atras"
             android:padding="10dp"
             android:src="@drawable/boton_atras" />
         
@@ -26,6 +27,7 @@
             android:layout_gravity="center"
             android:layout_weight="90"
             android:gravity="center_horizontal"
+            android:paddingRight="20dp"
             android:text="Noticias"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
@@ -33,11 +35,12 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listView1"
+        android:id="@+id/lstNoticias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:cacheColorHint="#00000000"
         android:divider="@drawable/linea" >
 
     </ListView>
