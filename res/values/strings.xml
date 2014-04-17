@@ -9,5 +9,8 @@
     <string name="title_activity_noticias">Noticias</string>
     <string name="title_activity_social">Social</string>
     <string name="acerca_de">El Festival Internacional de la Imagen realizado por el departamento de Diseño Visual de la Universidad de Caldas es un espacio de encuentro y debate entorno a temas relacionados con el diseño interactivo, las artes mediales, la creacion audiovisual, los paisajes sonoros y electro acústicos y en general las nuevas relaciones entre arte, diseño, ciencia y tecnologia.</string>
+    <string name="title_activity_noticia">Noticia</string>
+    <string name="title_activity_programacion_categorias">ProgramacionCategorias</string>
+    <string name="title_activity_programacion_eventos">ProgramacionEventos</string>
 
 </resources>

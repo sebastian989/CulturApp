@@ -11,15 +11,18 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class Noticias extends Activity {
+public class Noticias extends Activity implements OnItemClickListener {
 	
 	private WebService ws;
 	private ProgressDialog dialog;
 	private ListView lstNoticias;
-	JSONArray lista = new JSONArray();//Stub
+	private JSONArray listaNoticias = new JSONArray();//Stub
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,7 @@ public class Noticias extends Activity {
 		this.ws = new WebService();
 		this.dialog = new ProgressDialog(Noticias.this);
 		this.lstNoticias = (ListView) findViewById(R.id.lstNoticias);
+		this.lstNoticias.setOnItemClickListener(this);
 		
 		//Stub
 		JSONObject noticia = new JSONObject();
@@ -42,7 +46,7 @@ public class Noticias extends Activity {
 					"dividido el planeta por sus posiciones ideológicas y políticas, llevaron su confrontación al " +
 					"dominio del espacio, logrando los soviéticos su primera victoria en este campo el 4 de octubre de " +
 					"1957. Su satélite se convirtió así en el primer objeto en el espacio construido por humanos.");
-			lista.put(noticia);
+			listaNoticias.put(noticia);
 			//-----------------
 			noticia = new JSONObject();
 			noticia.put("titulo", "Noticia2");
@@ -54,7 +58,7 @@ public class Noticias extends Activity {
 					"dividido el planeta por sus posiciones ideológicas y políticas, llevaron su confrontación al " +
 					"dominio del espacio, logrando los soviéticos su primera victoria en este campo el 4 de octubre de " +
 					"1957. Su satélite se convirtió así en el primer objeto en el espacio construido por humanos.");
-			lista.put(noticia);
+			listaNoticias.put(noticia);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -65,7 +69,7 @@ public class Noticias extends Activity {
 	}
 	
 	private void mostrarNoticias(JSONArray noticias){
-		Adaptador adaptador = new Adaptador(this, lista);
+		Adaptador adaptador = new Adaptador(this, listaNoticias);
 		this.lstNoticias.setAdapter(adaptador);
 		this.dialog.dismiss();
 	}
@@ -101,6 +105,18 @@ public class Noticias extends Activity {
 			
 			mostrarNoticias(respuesta);
 		}
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+		Intent intent = new Intent(this, Noticia.class);
+		try {
+			JSONObject noticia = this.listaNoticias.getJSONObject(arg2);
+			intent.putExtra("TITULO", noticia.getString("titulo"));
+			intent.putExtra("FECHA", noticia.getString("fecha"));
+			intent.putExtra("DESCRIPCION", noticia.getString("descripcion"));
+		} catch (JSONException e) {}
+		startActivity(intent);
 	}
 
 }

@@ -38,6 +38,18 @@
             android:name="com.culturapp.Social"
             android:label="@string/title_activity_social" >
         </activity>
+        <activity
+            android:name="com.culturapp.Noticia"
+            android:label="@string/title_activity_noticia" >
+        </activity>
+        <activity
+            android:name="com.culturapp.ProgramacionCategorias"
+            android:label="@string/title_activity_programacion_categorias" >
+        </activity>
+        <activity
+            android:name="com.culturapp.ProgramacionEventos"
+            android:label="@string/title_activity_programacion_eventos" >
+        </activity>
     </application>
 
 </manifest>

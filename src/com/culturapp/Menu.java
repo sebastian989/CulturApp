@@ -27,4 +27,9 @@ public class Menu extends Activity {
 		Intent intent = new Intent(this, Social.class);
 		startActivity(intent);
 	}
+	
+	public void programacion(View v){
+		Intent intent = new Intent(this, ProgramacionCategorias.class);
+		startActivity(intent);
+	}
 }
