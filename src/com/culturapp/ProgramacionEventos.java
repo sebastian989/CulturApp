@@ -6,22 +6,23 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.adaptadores.Adaptador;
 import com.adaptadores.AdaptadorEvento;
 import com.recursos.ConfiguracionGlobal;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class ProgramacionEventos extends Activity {
+public class ProgramacionEventos extends Activity implements OnItemClickListener {
 	
 	private JSONArray programacion;
+	private JSONArray lstActual;
 	private String categoria;
 	private String fecha;
 	private int diaActual;
@@ -39,6 +40,7 @@ public class ProgramacionEventos extends Activity {
 		this.categoria = getIntent().getStringExtra("CATEGORIA");
 		this.fecha = "2014-05-05";
 		this.diaActual = 0;
+		this.lstEventos.setOnItemClickListener(this);
 		this.cargarBotones();
 		this.cargarImagenes();
 		this.cargarImagenesSeleccionadas();
@@ -122,18 +124,18 @@ public class ProgramacionEventos extends Activity {
 	}
 	
 	private JSONArray filtrarEventos(){
-		JSONArray eventosFiltrados = new JSONArray();
+		this.lstActual = new JSONArray();
 		for(int i=0; i<this.programacion.length(); i++){
 			try {
 				JSONObject evento = this.programacion.getJSONObject(i);
 				String [] fechaEvento = evento.getString("fecha").split(" ");
 				if(fechaEvento[0].equals(this.fecha) &&
 						evento.getString("categoria").toUpperCase().equals(this.categoria.toUpperCase())){
-					eventosFiltrados.put(evento);
+					this.lstActual.put(evento);
 				}
 			} catch (JSONException e) {}
 		}
-		return eventosFiltrados;
+		return this.lstActual;
 	}
 	
 	private void mostrarEventos(JSONArray listaEventos) {
@@ -143,5 +145,15 @@ public class ProgramacionEventos extends Activity {
 	
 	public void atras(View v){
 		this.finish();
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+		try {
+			ConfiguracionGlobal.getSingletonObject().setEvento(this.lstActual.getJSONObject(arg2));
+			Intent intent = new Intent(this, Evento.class);
+			startActivity(intent);
+		} catch (JSONException e) {}
+		
 	}
 }

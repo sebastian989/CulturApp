@@ -13,5 +13,8 @@
     <string name="title_activity_programacion_categorias">ProgramacionCategorias</string>
     <string name="title_activity_programacion_eventos">ProgramacionEventos</string>
     <string name="title_activity_notificacion">Notificacion</string>
-
+     <string name="title_activity_evento_ruta">EventoRuta</string>
+     <string name="title_activity_evento">Evento</string>
+    <string name="title_activity_evento_informacion">EventoInformacion</string>
 </resources>
+

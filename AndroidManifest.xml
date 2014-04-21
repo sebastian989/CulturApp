@@ -74,6 +74,19 @@
             android:label="@string/title_activity_notificacion" >
         </activity>
         
+        <activity
+            android:name="com.culturapp.Evento"
+            android:label="@string/title_activity_evento" >
+        </activity>
+        <activity
+            android:name="com.culturapp.EventoInformacion"
+            android:label="@string/title_activity_evento_informacion" >
+        </activity>
+        <activity
+            android:name="com.culturapp.EventoRuta"
+            android:label="@string/title_activity_evento_ruta" >
+        </activity>
+        
         <receiver
             android:name="com.google.android.gcm.GCMBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
