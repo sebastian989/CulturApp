@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Informacion" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/barra_superior2" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:onClick="atras"
+            android:padding="10dp"
+            android:src="@drawable/boton_atras" />
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="90"
+            android:gravity="center_horizontal"
+            android:paddingRight="20dp"
+            android:text="Evento"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+        
+    </LinearLayout>
+
+
+<TabHost
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    	<LinearLayout
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="fill_parent"
+    	    android:orientation="vertical" >
+
+    	    <FrameLayout
+    	        android:id="@android:id/tabcontent"
+    	        android:layout_width="fill_parent"
+    	        android:layout_height="fill_parent"
+    	        android:layout_weight="80" >
+
+    	    </FrameLayout>
+    	    
+    	    <TabWidget
+    	        android:id="@android:id/tabs"
+    	        android:layout_width="fill_parent"
+    	        android:layout_height="wrap_content"
+    	        android:layout_gravity="bottom"
+    	        android:background="@color/fondBlue"
+    	        android:gravity="bottom" >
+
+    	    </TabWidget>
+    	</LinearLayout>
+
+</TabHost>
+
+</LinearLayout>

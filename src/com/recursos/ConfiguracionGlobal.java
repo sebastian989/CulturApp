@@ -1,11 +1,13 @@
 package com.recursos;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class ConfiguracionGlobal {
 
 	private static ConfiguracionGlobal singletonObject;
 	private JSONArray programacion;
+	private JSONObject evento;
 
 	/**
 	 * 
@@ -24,5 +26,13 @@ public class ConfiguracionGlobal {
 
 	public void setProgramacion(JSONArray programacion) {
 		this.programacion = programacion;
+	}
+
+	public JSONObject getEvento() {
+		return evento;
+	}
+
+	public void setEvento(JSONObject evento) {
+		this.evento = evento;
 	}	
 }

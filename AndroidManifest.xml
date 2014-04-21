@@ -7,6 +7,9 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="10" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -49,6 +52,18 @@
         <activity
             android:name="com.culturapp.ProgramacionEventos"
             android:label="@string/title_activity_programacion_eventos" >
+        </activity>
+        <activity
+            android:name="com.culturapp.Evento"
+            android:label="@string/title_activity_evento" >
+        </activity>
+        <activity
+            android:name="com.culturapp.EventoInformacion"
+            android:label="@string/title_activity_evento_informacion" >
+        </activity>
+        <activity
+            android:name="com.culturapp.EventoRuta"
+            android:label="@string/title_activity_evento_ruta" >
         </activity>
     </application>
 
