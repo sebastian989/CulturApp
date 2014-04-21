@@ -12,5 +12,6 @@
     <string name="title_activity_noticia">Noticia</string>
     <string name="title_activity_programacion_categorias">ProgramacionCategorias</string>
     <string name="title_activity_programacion_eventos">ProgramacionEventos</string>
+    <string name="title_activity_notificacion">Notificacion</string>
 
 </resources>

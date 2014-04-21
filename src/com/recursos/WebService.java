@@ -20,7 +20,7 @@ import android.app.Activity;
 
 public class WebService extends Activity {
 
-	private String url = "http://manizalesmas.gruporevive.co/Controlador/FachadaMovil.php";
+	private String url = "http://pruebaandroid.tk/ServerFestivalImagen/Controlador/Fachada.php";
 	private String resultado;
 	private JSONArray jArray;
 	private List<BasicNameValuePair> valores;

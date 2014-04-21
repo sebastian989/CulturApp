@@ -6,6 +6,7 @@ public class ConfiguracionGlobal {
 
 	private static ConfiguracionGlobal singletonObject;
 	private JSONArray programacion;
+	private String pushId;
 
 	/**
 	 * 
@@ -25,4 +26,13 @@ public class ConfiguracionGlobal {
 	public void setProgramacion(JSONArray programacion) {
 		this.programacion = programacion;
 	}	
+	
+	public String getPushId() {
+		return pushId;
+	}
+
+	public void setPushId(String p) {
+		this.pushId = p;
+	}	
+	
 }

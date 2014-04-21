@@ -7,6 +7,25 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="10" />
+    
+    <!-- Acceso a cuentas de google -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- /* Acceso a internet*/ -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- /* Evitar que el celular entre en reposo para que lleguen la notificaciones*/ -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- /* recibir notificaciones PUSH del servicio GCM*/ -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- *Si el dispositivo sobre el que estamos ejecutando la aplicación dispone de una versión inferior 4.1 (API 16)*/ -->
+    <uses-permission
+        android:name="com.culturapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.culturapp.permission.C2D_MESSAGE" />
+    <!-- /* Acceso a vibracion*/ -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- /* Acceso a Red*/ -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -50,6 +69,23 @@
             android:name="com.culturapp.ProgramacionEventos"
             android:label="@string/title_activity_programacion_eventos" >
         </activity>
+        <activity
+            android:name="com.culturapp.Notificacion"
+            android:label="@string/title_activity_notificacion" >
+        </activity>
+        
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.culturapp" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.culturapp.GCMIntentService" />
+        
     </application>
 
 </manifest>
