@@ -28,6 +28,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="10dp"
         android:maxLines="5"
+        android:ellipsize="end"
         android:text="Descripcion de una noticia"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/white" />

@@ -74,16 +74,23 @@
                     android:textSize="16sp" />
 
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:src="@drawable/linea_categorias" />
             
             <LinearLayout
                 android:id="@+id/paisajes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="mostrarEventos"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="30dp" >
+                android:onClick="mostrarEventos" >
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -106,15 +113,22 @@
 
             </LinearLayout>
             
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:src="@drawable/linea_categorias" />
+            
             <LinearLayout
                 android:id="@+id/eventosesp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="mostrarEventos"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="30dp" >
+                android:onClick="mostrarEventos" >
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -137,15 +151,22 @@
 
             </LinearLayout>
             
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:src="@drawable/linea_categorias" />
+            
             <LinearLayout
                 android:id="@+id/talleres"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="mostrarEventos"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="30dp" >
+                android:onClick="mostrarEventos" >
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -168,15 +189,22 @@
 
             </LinearLayout>
             
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:src="@drawable/linea_categorias" />
+            
             <LinearLayout
                 android:id="@+id/exposiciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="mostrarEventos"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="30dp" >
+                android:onClick="mostrarEventos" >
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -199,15 +227,22 @@
 
             </LinearLayout>
             
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:src="@drawable/linea_categorias" />
+            
             <LinearLayout
                 android:id="@+id/cine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="mostrarEventos"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="30dp" >
+                android:onClick="mostrarEventos" >
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -230,15 +265,22 @@
 
             </LinearLayout>
             
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:src="@drawable/linea_categorias" />
+            
             <LinearLayout
                 android:id="@+id/academico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="mostrarEventos"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="30dp" >
+                android:onClick="mostrarEventos" >
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -261,16 +303,23 @@
 
             </LinearLayout>
             
-             <LinearLayout
-                android:id="@+id/mercado"
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:onClick="mostrarEventos"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="15dp" >
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:src="@drawable/linea_categorias" />
+            
+             <LinearLayout
+                 android:id="@+id/mercado"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="15dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:onClick="mostrarEventos" >
 
                 <ImageView
                     android:id="@+id/imageView1"

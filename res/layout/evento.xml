@@ -20,13 +20,14 @@
             android:src="@drawable/boton_atras" />
         
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/lblTituloEvento"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="90"
-            android:gravity="center_horizontal"
+            android:gravity="center_horizontal|center_vertical"
             android:paddingRight="20dp"
+            android:singleLine="true"
             android:text="Evento"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
@@ -57,7 +58,7 @@
     	        android:layout_width="fill_parent"
     	        android:layout_height="wrap_content"
     	        android:layout_gravity="bottom"
-    	        android:background="@color/fondBlue"
+    	        android:background="@color/red"
     	        android:gravity="bottom" >
 
     	    </TabWidget>

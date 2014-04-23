@@ -1,5 +1,10 @@
 package com.culturapp;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.recursos.ConfiguracionGlobal;
+
 import android.os.Bundle;
 import android.app.TabActivity;
 import android.content.Intent;
@@ -7,6 +12,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.TabHost.OnTabChangeListener;
 
 public class Evento extends TabActivity implements OnTabChangeListener {
@@ -18,6 +24,14 @@ public class Evento extends TabActivity implements OnTabChangeListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.evento);
 		
+		TextView lblTitulo = (TextView) findViewById(R.id.lblTituloEvento);
+		if(ConfiguracionGlobal.getSingletonObject().getEvento()!=null){
+			JSONObject evento = ConfiguracionGlobal.getSingletonObject().getEvento();
+			try {
+				lblTitulo.setText(evento.getString("titulo")+"sdasdasdasdasdadadasda");
+			} catch (JSONException e) {}
+		}
+		
 		tabHost = getTabHost();
         TabHost.TabSpec spec;
         Intent intent;
@@ -25,13 +39,13 @@ public class Evento extends TabActivity implements OnTabChangeListener {
         
         //Tab 1
         intent = new Intent().setClass(this, EventoInformacion.class);
-        spec = tabHost.newTabSpec("pestanaa").setIndicator("Evento", res.getDrawable(R.drawable.pestana1)).setContent(intent);
+        spec = tabHost.newTabSpec("pestanaa").setIndicator("Evento").setContent(intent);
         tabHost.addTab(spec);
         //tabHost.getTabWidget().setBackgroundColor(Color.BLACK);
         
         //Tab2
         intent = new Intent().setClass(this, EventoRuta.class);
-        spec = tabHost.newTabSpec("pestanab").setIndicator("Ruta", res.getDrawable(R.drawable.pestana2)).setContent(intent);
+        spec = tabHost.newTabSpec("pestanab").setIndicator("Ruta").setContent(intent);
         tabHost.addTab(spec);
         
         tabHost.getTabWidget().getChildAt(0).setBackgroundResource(R.drawable.barra_superior2);
