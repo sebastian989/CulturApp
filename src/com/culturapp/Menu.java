@@ -55,6 +55,11 @@ public class Menu extends Activity {
 		startActivity(intent);
 	}
 	
+	public void mapa(View v){
+		Intent intent = new Intent(this, Mapa.class);
+		startActivity(intent);
+	}
+	
 	public class Login extends AsyncTask<String, Void, Void> {
 
 		Boolean exito;
@@ -100,11 +105,7 @@ public class Menu extends Activity {
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
 			pd2.dismiss();
-			if(exito){
-				Toast.makeText(getApplicationContext(),ConfiguracionGlobal.getSingletonObject().getProgramacion().toString(),Toast.LENGTH_LONG).show();
-
-			}
-			else if(!exito){
+			if(!exito){
 				Toast.makeText(getApplicationContext(),"No hay nada programado",Toast.LENGTH_LONG).show();
 			}
 		}

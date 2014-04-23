@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_noticias"
-    android:orientation="vertical"
-    tools:context=".ProgramacionEventos" >
+    android:orientation="vertical" >
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,45 +18,41 @@
             android:onClick="atras"
             android:padding="10dp"
             android:src="@drawable/boton_atras" />
-
+        
         <TextView
-            android:id="@+id/lblTipoCategoria"
+            android:id="@+id/textView1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="90"
             android:gravity="center_horizontal"
-            android:paddingRight="5dp"
-            android:text="Programación"
+            android:paddingRight="20dp"
+            android:text="Mapa de obras"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
-
+        
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="20dp" >
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@+id/progress" >
 
-        <TextView
-            android:id="@+id/textView1"
+        <ImageView
+            android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:text="MAYO"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+            android:layout_weight="16.6"
+            android:src="@drawable/prog_icono_mayo" />
 
         <ImageView
             android:id="@+id/btn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="16.6"
             android:onClick="cambiarDia"
             android:src="@drawable/prog_select_boton_diaa" />
 
@@ -65,8 +60,8 @@
             android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="16.6"
             android:onClick="cambiarDia"
             android:src="@drawable/prog_boton_diab" />
 
@@ -74,8 +69,8 @@
             android:id="@+id/btn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="16.6"
             android:onClick="cambiarDia"
             android:src="@drawable/prog_boton_diac" />
 
@@ -83,8 +78,8 @@
             android:id="@+id/btn4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="16.6"
             android:onClick="cambiarDia"
             android:src="@drawable/prog_boton_diad" />
 
@@ -92,8 +87,8 @@
             android:id="@+id/btn5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="16.6"
             android:onClick="cambiarDia"
             android:src="@drawable/prog_boton_diae" />
 
@@ -101,32 +96,31 @@
             android:id="@+id/btn6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="16.6"
             android:onClick="cambiarDia"
             android:src="@drawable/prog_boton_diaf" />
-
-       
-
+        
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView10"
+    <RelativeLayout
+        android:id="@+id/relative_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/prog_linea_horizontal" />
+        android:layout_height="match_parent" >
 
-    <ListView
-        android:id="@+id/lstEventos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="13dp"
-        android:cacheColorHint="#00000000"
-        android:divider="@drawable/linea" >
+        <WebView
+            android:id="@+id/wvMapa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true" />
 
-    </ListView>
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+    </RelativeLayout>
 
 </LinearLayout>

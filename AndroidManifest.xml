@@ -7,7 +7,7 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="10" />
-    
+
     <!-- Acceso a cuentas de google -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <!-- /* Acceso a internet*/ -->
@@ -25,7 +25,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- /* Acceso a Red*/ -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -73,7 +73,6 @@
             android:name="com.culturapp.Notificacion"
             android:label="@string/title_activity_notificacion" >
         </activity>
-        
         <activity
             android:name="com.culturapp.Evento"
             android:label="@string/title_activity_evento" >
@@ -86,19 +85,24 @@
             android:name="com.culturapp.EventoRuta"
             android:label="@string/title_activity_evento_ruta" >
         </activity>
-        
+
         <receiver
             android:name="com.google.android.gcm.GCMBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
                 <category android:name="com.culturapp" />
             </intent-filter>
         </receiver>
 
         <service android:name="com.culturapp.GCMIntentService" />
-        
+
+        <activity
+            android:name="com.culturapp.Mapa"
+            android:label="@string/title_activity_mapa" >
+        </activity>
     </application>
 
 </manifest>

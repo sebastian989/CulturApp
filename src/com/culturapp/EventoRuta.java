@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 public class EventoRuta extends Activity {
 	
 	private WebView mapa;
+	private JSONObject evento;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +27,12 @@ public class EventoRuta extends Activity {
 		this.mapa = (WebView) findViewById(R.id.wvMapa);
 		this.mapa.getSettings().setJavaScriptEnabled(true);
 		this.mapa.getSettings().setGeolocationEnabled(true);
-		String MAP_URL = "http://manizalesmas.gruporevive.co/Vista/Mapa.html";
+		String MAP_URL = "http://pruebaandroid.tk/ServerFestivalImagen/Vista/mapaAndroid.php";
 		final ProgressBar progress = (ProgressBar) findViewById(R.id.progress);
 		mapa.setWebViewClient(new WebViewClient() {
 			@Override
 			public void onPageFinished(WebView view, String url) {
-				ubicarPuntos();
+				ruta();
 				progress.setVisibility(View.INVISIBLE);
 			}
 
@@ -60,7 +61,12 @@ public class EventoRuta extends Activity {
 		}
 	}
 
-	private void ubicarPuntos() {
+	private void ruta() {
+		/*
+		 * {'valores':[{'descripcion':'Aqui estoy yo','latitud':5.056420,'longitud':-75.493080,'categoria':'talleres'},
+		 * {'descripcion':'Taller de transmedia <br> 10:00 am','latitud':5.065547,'longitud':-75.510922,
+		 * 'categoria':'talleres'}]};
+		 */
 		JSONObject paqueteDatos = new JSONObject();
 		JSONArray jSonConsulta = new JSONArray();
 		JSONObject elemento = new JSONObject();
