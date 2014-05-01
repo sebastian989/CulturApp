@@ -2,11 +2,11 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     
     <item 
-        android:drawable="@drawable/info_color"
+        android:drawable="@drawable/info_icono_bb"
         android:state_selected="true">
     </item>
     
     <item 
-        android:drawable="@drawable/info_blanco">
+        android:drawable="@drawable/info_icono_b">
     </item>
 </selector>

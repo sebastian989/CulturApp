@@ -22,7 +22,7 @@ public class Noticias extends Activity implements OnItemClickListener {
 	private WebService ws;
 	private ProgressDialog dialog;
 	private ListView lstNoticias;
-	private JSONArray listaNoticias = new JSONArray();//Stub
+	private JSONArray listaNoticias = new JSONArray();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,42 +34,12 @@ public class Noticias extends Activity implements OnItemClickListener {
 		this.lstNoticias = (ListView) findViewById(R.id.lstNoticias);
 		this.lstNoticias.setOnItemClickListener(this);
 		
-		//Stub
-		JSONObject noticia = new JSONObject();
-		try {
-			noticia.put("titulo", "Noticia1");
-			noticia.put("fecha", "23-05-07");
-			noticia.put("descripcion", "Desde el lanzamiento, en 1957, del primer satélite artificial " +
-					"al espacio –una especie de bola de metal con antenas llamado Sputnik 1, de autoría soviética-, " +
-					"han llegado a la órbita terrestre más de 20.000 de estos objetos, un promedio de 70 por año en " +
-					"la última década.Era plena Guerra Fría. Estados Unidos y la Unión Soviética, potencias que tenían " +
-					"dividido el planeta por sus posiciones ideológicas y políticas, llevaron su confrontación al " +
-					"dominio del espacio, logrando los soviéticos su primera victoria en este campo el 4 de octubre de " +
-					"1957. Su satélite se convirtió así en el primer objeto en el espacio construido por humanos.");
-			listaNoticias.put(noticia);
-			//-----------------
-			noticia = new JSONObject();
-			noticia.put("titulo", "Noticia2");
-			noticia.put("fecha", "23-04-09");
-			noticia.put("descripcion", "Desde el lanzamiento, en 1957, del primer satélite artificial " +
-					"al espacio –una especie de bola de metal con antenas llamado Sputnik 1, de autoría soviética-, " +
-					"han llegado a la órbita terrestre más de 20.000 de estos objetos, un promedio de 70 por año en " +
-					"la última década.Era plena Guerra Fría. Estados Unidos y la Unión Soviética, potencias que tenían " +
-					"dividido el planeta por sus posiciones ideológicas y políticas, llevaron su confrontación al " +
-					"dominio del espacio, logrando los soviéticos su primera victoria en este campo el 4 de octubre de " +
-					"1957. Su satélite se convirtió así en el primer objeto en el espacio construido por humanos.");
-			listaNoticias.put(noticia);
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		//Fin stub
-		
 		new Sincronizar().execute();
 	}
 	
 	private void mostrarNoticias(JSONArray noticias){
-		Adaptador adaptador = new Adaptador(this, listaNoticias);
+		this.listaNoticias = noticias;
+		Adaptador adaptador = new Adaptador(this, noticias);
 		this.lstNoticias.setAdapter(adaptador);
 		this.dialog.dismiss();
 	}
@@ -94,7 +64,7 @@ public class Noticias extends Activity implements OnItemClickListener {
 
 		@Override
 		protected Void doInBackground(Void... arg0) {
-			String[] parametros = {"url,http://citytaxiapp.com/emprendimiento/emprendimiento/Controller/facade_blog.php?method=mostrar_aportes"};
+			String[] parametros = {"getNoticias"};
 			respuesta = ws.conectar(parametros);
 			return null;
 		}

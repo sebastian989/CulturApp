@@ -174,7 +174,7 @@ public class Mapa extends Activity {
 				if (fechaEvento[0].equals(this.fecha)) {
 					String latitud = jObj.getString("latitud");
 					String longitud = jObj.getString("longitud");
-					String descripcion = jObj.getString("descripcion");
+					String descripcion = jObj.getString("titulo");
 					String hora;
 					String [] horaMilitar = fechaEvento[1].split(":");
 					if(Integer.parseInt(horaMilitar[0])>12){

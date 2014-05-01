@@ -40,12 +40,16 @@
         android:layout_margin="10dp"
         android:layout_toLeftOf="@+id/progress" >
 
-        <ImageView
-            android:id="@+id/imageView1"
+        <TextView
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="16.6"
-            android:src="@drawable/prog_icono_mayo" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="MAYO"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/btn1"

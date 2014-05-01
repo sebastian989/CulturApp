@@ -5,6 +5,8 @@ import org.json.JSONObject;
 import com.google.android.gcm.GCMRegistrar;
 import com.recursos.ConfiguracionGlobal;
 import com.recursos.WebService;
+
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -31,8 +33,25 @@ public class Menu extends Activity {
 		ws = new WebService();
 		pd2 = new ProgressDialog(this);
 		pd2.setCancelable(false);
-		new Login().execute("");
-		
+		if(this.hayInternet()){
+			new Login().execute("");
+		}
+		else{
+			Intent intent = new Intent(this, ConexionInternet.class);
+			startActivity(intent);
+			this.finish();
+		}
+	}
+	
+	private boolean hayInternet() {
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		if (cm.getActiveNetworkInfo() != null
+				&& cm.getActiveNetworkInfo().isAvailable()
+				&& cm.getActiveNetworkInfo().isConnected()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	public void invitados(View v){
@@ -41,8 +60,14 @@ public class Menu extends Activity {
 	}
 	
 	public void noticias(View v){
-		Intent intent = new Intent(this, Noticias.class);
-		startActivity(intent);
+		if(this.hayInternet()){
+			Intent intent = new Intent(this, Noticias.class);
+			startActivity(intent);
+		}
+		else{
+			Toast.makeText(this, "Necesitas una conexión a internet \n para " +
+					"ingresar a esta opción.", Toast.LENGTH_LONG).show();
+		}
 	}
 	
 	public void social(View v){
@@ -56,8 +81,14 @@ public class Menu extends Activity {
 	}
 	
 	public void mapa(View v){
-		Intent intent = new Intent(this, Mapa.class);
-		startActivity(intent);
+		if(this.hayInternet()){
+			Intent intent = new Intent(this, Mapa.class);
+			startActivity(intent);
+		}
+		else{
+			Toast.makeText(this, "Necesitas una conexión a internet \n para " +
+					"ingresar a esta opción.", Toast.LENGTH_LONG).show();
+		}
 	}
 	
 	public class Login extends AsyncTask<String, Void, Void> {

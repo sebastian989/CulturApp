@@ -17,5 +17,6 @@
     <string name="title_activity_evento">Evento</string>
     <string name="title_activity_evento_informacion">EventoInformacion</string>
     <string name="title_activity_mapa">Mapa</string>
+    <string name="title_activity_conexion_internet">ConexionInternet</string>
 
 </resources>
