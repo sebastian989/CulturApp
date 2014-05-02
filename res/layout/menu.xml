@@ -7,14 +7,15 @@
     tools:context=".Menu" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/lblBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/barra_superior"
         android:gravity="center_horizontal|center_vertical"
         android:text="Menú"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"

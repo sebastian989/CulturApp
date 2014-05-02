@@ -21,7 +21,7 @@
             android:src="@drawable/boton_atras" />
         
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/lblBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -30,7 +30,8 @@
             android:paddingRight="20dp"
             android:text="Noticias"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
         
     </LinearLayout>
 
@@ -38,10 +39,11 @@
         android:id="@+id/lstNoticias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:cacheColorHint="#00000000"
-        android:divider="@drawable/linea" >
+        android:divider="@drawable/linea"
+        android:paddingTop="20dp" >
 
     </ListView>
 

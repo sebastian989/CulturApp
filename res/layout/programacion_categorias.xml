@@ -21,16 +21,17 @@
             android:src="@drawable/boton_atras" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/lblBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="90"
             android:gravity="center_horizontal"
-            android:paddingRight="5dp"
+            android:paddingRight="20dp"
             android:text="Programación"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
 
     </LinearLayout>
 
@@ -62,7 +63,7 @@
                     android:src="@drawable/prog_seminario_internacional" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lbla"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -100,7 +101,7 @@
                     android:src="@drawable/prog_paisajes_sonoros" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lblb"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -138,7 +139,7 @@
                     android:src="@drawable/prog_eventos_especiales" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lblc"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -176,7 +177,7 @@
                     android:src="@drawable/prog_talleres" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lbld"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -214,7 +215,7 @@
                     android:src="@drawable/prog_exposiciones" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lble"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -252,7 +253,7 @@
                     android:src="@drawable/prog_cineydigital" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lblf"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -290,7 +291,7 @@
                     android:src="@drawable/prog_foro_academico" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lblg"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -329,7 +330,7 @@
                     android:src="@drawable/prog_mercado" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lblh"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

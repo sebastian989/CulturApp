@@ -20,7 +20,7 @@
             android:src="@drawable/boton_atras" />
         
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/lblBarra"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -29,7 +29,8 @@
             android:paddingRight="20dp"
             android:text="Mapa de obras"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
         
     </LinearLayout>
 
@@ -41,7 +42,7 @@
         android:layout_toLeftOf="@+id/progress" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/lblMayo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -49,7 +50,8 @@
             android:layout_weight="1"
             android:text="MAYO"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/btn1"

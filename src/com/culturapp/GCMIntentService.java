@@ -96,7 +96,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 
 		         RemoteViews contentView = new RemoteViews(getPackageName(),R.layout.custom_notifications);
 		         contentView.setImageViewResource(R.id.logo2, R.drawable.ic_launcher);
-		         contentView.setTextViewText(R.id.description, message+title);
+		         contentView.setTextViewText(R.id.description, title);
 		         notification.contentView = contentView;
 		         notification.contentIntent = PendingIntent.getActivity(this.getBaseContext(), 0, myIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 		         long[] vibrate = {100,100,200,300};

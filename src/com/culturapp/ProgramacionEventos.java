@@ -12,6 +12,7 @@ import com.recursos.ConfiguracionGlobal;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -30,11 +31,16 @@ public class ProgramacionEventos extends Activity implements OnItemClickListener
 	private ArrayList<Integer> lstImagenes;
 	private ArrayList<Integer> lstImagenesSelec;
 	private ListView lstEventos;
+	private Typeface fuenteTitulo;
+	private Typeface fuenteParrafo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.programacion_eventos);
+		
+		this.fuenteParrafo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Lt.otf");
+		this.fuenteTitulo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Md.otf");
 		
 		this.lstEventos = (ListView) findViewById(R.id.lstEventos);
 		this.categoria = getIntent().getStringExtra("CATEGORIA");
@@ -44,7 +50,10 @@ public class ProgramacionEventos extends Activity implements OnItemClickListener
 		this.cargarBotones();
 		this.cargarImagenes();
 		this.cargarImagenesSeleccionadas();
+		TextView lblMayo = (TextView) findViewById(R.id.lblMayo);
+		lblMayo.setTypeface(fuenteTitulo);
 		TextView lblTitulo = (TextView) findViewById(R.id.lblTipoCategoria);
+		lblTitulo.setTypeface(fuenteTitulo);
 		lblTitulo.setText(this.categoria);
 		
 		if (ConfiguracionGlobal.getSingletonObject().getProgramacion()!=null){
@@ -139,7 +148,7 @@ public class ProgramacionEventos extends Activity implements OnItemClickListener
 	}
 	
 	private void mostrarEventos(JSONArray listaEventos) {
-		AdaptadorEvento adaptador = new AdaptadorEvento(this, listaEventos);
+		AdaptadorEvento adaptador = new AdaptadorEvento(this, listaEventos, this.fuenteTitulo, this.fuenteParrafo);
 		this.lstEventos.setAdapter(adaptador);
 	}
 	

@@ -13,6 +13,9 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -30,7 +33,16 @@ public class WebService extends Activity {
 
 		this.valores = new ArrayList<BasicNameValuePair>();
 		try {
-			DefaultHttpClient client = new DefaultHttpClient();
+			HttpParams httpParameters = new BasicHttpParams();
+			// Set the timeout in milliseconds until a connection is established.
+			// The default value is zero, that means the timeout is not used. 
+			int timeoutConnection = 3000;
+			HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+			// Set the default socket timeout (SO_TIMEOUT) 
+			// in milliseconds which is the timeout for waiting for data.
+			int timeoutSocket = 5000;
+			HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+			DefaultHttpClient client = new DefaultHttpClient(httpParameters);
 			HttpPost request = new HttpPost(this.url);
 			UrlEncodedFormEntity encodeEntity = null;
 			this.valores.add(new BasicNameValuePair("clase", "WebService"));
@@ -56,9 +68,19 @@ public class WebService extends Activity {
 			this.resultado = sb.toString();
 			this.jArray = new JSONArray(resultado);
 		} catch (ClientProtocolException e) {
-			return null;
+			try {
+				this.jArray = new JSONArray("[{'respuesta':'false'}]");
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		} catch (IOException e) {
-			return null;
+			try {
+				this.jArray = new JSONArray("[{'respuesta':'false'}]");
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		} catch (Exception e) {
 			try {
 				this.jArray = new JSONArray("[{'respuesta':'false'}]");

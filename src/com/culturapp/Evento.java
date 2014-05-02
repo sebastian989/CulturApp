@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TabHost;
@@ -24,13 +25,19 @@ public class Evento extends TabActivity implements OnTabChangeListener, OnClickL
 
 	TabHost tabHost;
 	private LocationManager lm;
+	private Typeface fuenteTitulo;
+	private Typeface fuenteParrafo;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.evento);
 		
+		this.fuenteParrafo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Lt.otf");
+		this.fuenteTitulo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Md.otf");
+		
 		TextView lblTitulo = (TextView) findViewById(R.id.lblTituloEvento);
+		lblTitulo.setTypeface(fuenteTitulo);
 		this.lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 		if(ConfiguracionGlobal.getSingletonObject().getEvento()!=null){
 			JSONObject evento = ConfiguracionGlobal.getSingletonObject().getEvento();

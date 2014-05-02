@@ -13,23 +13,33 @@ import android.os.SystemClock;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 
 public class Menu extends Activity {
 
 	public WebService ws;
 	public ProgressDialog pd2;
 	public String imei;
-	
+	private Typeface fuenteTitulo;
+	private Typeface fuenteParrafo;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
+		
+		this.fuenteParrafo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Lt.otf");
+		this.fuenteTitulo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Md.otf");
+		
+		TextView lblBar = (TextView) findViewById(R.id.lblBar);
+		lblBar.setTypeface(fuenteTitulo);
+		
 		ws = new WebService();
 		pd2 = new ProgressDialog(this);
 		pd2.setCancelable(false);
@@ -137,7 +147,9 @@ public class Menu extends Activity {
 			super.onPostExecute(result);
 			pd2.dismiss();
 			if(!exito){
-				Toast.makeText(getApplicationContext(),"No hay nada programado",Toast.LENGTH_LONG).show();
+				Intent intent = new Intent(getApplicationContext(), ConexionInternet.class);
+				startActivity(intent);
+				finish();
 			}
 		}
 	}

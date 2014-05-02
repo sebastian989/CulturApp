@@ -10,13 +10,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import android.app.Activity;
+import android.graphics.Typeface;
 
 public class EventoInformacion extends Activity {
+	
+	private Typeface fuenteTitulo;
+	private Typeface fuenteParrafo;
+	private Typeface fuenteEspecial;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.evento_informacion);
+		
+		this.fuenteParrafo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Lt.otf");
+		this.fuenteTitulo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Md.otf");
+		this.fuenteEspecial = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-UltLt.otf");
 		
 		if(ConfiguracionGlobal.getSingletonObject().getEvento() != null){
 			JSONObject evento = ConfiguracionGlobal.getSingletonObject().getEvento();
@@ -26,8 +35,11 @@ public class EventoInformacion extends Activity {
 
 	public void mostrarEvento(JSONObject evento){
 		TextView lblHora = (TextView) findViewById(R.id.lblHora);
+		lblHora.setTypeface(fuenteEspecial);
 		TextView lblFecha = (TextView) findViewById(R.id.lblFecha);
+		lblFecha.setTypeface(fuenteParrafo);
 		TextView lblDescripcion = (TextView) findViewById(R.id.lblDescripcion);
+		lblDescripcion.setTypeface(fuenteParrafo);
 		try {
 			String titulo = evento.getString("titulo");
 			String fecha = this.obtenerFecha(evento.getString("fecha"));

@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import com.culturapp.R;
 
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +18,15 @@ public class AdaptadorEvento extends BaseAdapter {
 
     private final Activity actividad;
     private final JSONArray lista;
+    private Typeface fuenteTitulo;
+   	private Typeface fuenteParrafo;
 
-    public AdaptadorEvento(Activity actividad, JSONArray lista) {
+    public AdaptadorEvento(Activity actividad, JSONArray lista, Typeface titulo, Typeface parr) {
     	  super();
           this.actividad = actividad;
           this.lista = lista;
+          this.fuenteTitulo = titulo;
+          this.fuenteParrafo = parr;
     }
 /**
  * @return: vista que contiene la lista renderizada con imagenes a 
@@ -32,6 +37,7 @@ public class AdaptadorEvento extends BaseAdapter {
           View view = inflater.inflate(R.layout.item_evento, null,true);
           
           TextView lblTitulo = (TextView)view.findViewById(R.id.lblTituloEvento);
+          lblTitulo.setTypeface(fuenteTitulo);
           
 		try {
 			JSONObject obj = this.lista.getJSONObject(position);

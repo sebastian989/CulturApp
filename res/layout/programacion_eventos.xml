@@ -30,7 +30,8 @@
             android:paddingRight="5dp"
             android:text="Programación"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
 
     </LinearLayout>
 
@@ -43,7 +44,7 @@
         android:layout_marginTop="20dp" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/lblMayo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -51,7 +52,8 @@
             android:layout_weight="1"
             android:text="MAYO"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/btn1"
@@ -122,11 +124,12 @@
         android:id="@+id/lstEventos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="13dp"
         android:cacheColorHint="#00000000"
-        android:divider="@drawable/linea" >
+        android:divider="@drawable/linea"
+        android:paddingTop="15dp" >
 
     </ListView>
 

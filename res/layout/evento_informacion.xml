@@ -16,7 +16,7 @@
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/white"
-        android:textSize="50sp" />
+        android:textSize="45sp" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -34,7 +34,7 @@
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/white"
-        android:textSize="30sp" />
+        android:textSize="28sp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -52,6 +52,7 @@
         android:layout_marginBottom="50dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
 </LinearLayout>

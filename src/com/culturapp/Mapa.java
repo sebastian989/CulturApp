@@ -12,12 +12,15 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Mapa extends Activity {
@@ -30,11 +33,21 @@ public class Mapa extends Activity {
 	private ArrayList<Integer> lstImagenesSelec;
 	private JSONArray programacion;
 	private String MAP_URL;
+	private Typeface fuenteTitulo;
+	private Typeface fuenteParrafo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mapa);
+		
+		this.fuenteParrafo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Lt.otf");
+		this.fuenteTitulo = Typeface.createFromAsset(getAssets(),"HelveticaNeueLTStd-Md.otf");
+		
+		TextView lblBar = (TextView) findViewById(R.id.lblBarra);
+		lblBar.setTypeface(fuenteTitulo);
+		TextView lblMayo = (TextView) findViewById(R.id.lblMayo);
+		lblMayo.setTypeface(this.fuenteTitulo);
 		
 		this.cargarBotones();
 		this.cargarImagenes();

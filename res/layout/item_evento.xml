@@ -15,7 +15,8 @@
         android:layout_weight="80"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
 
     <ImageView
         android:id="@+id/imageView1"
